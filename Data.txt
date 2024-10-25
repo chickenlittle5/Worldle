@@ -1,2 +1,6 @@
 Temperature
 Distance from Sun
+Size/radius
+Mass
+Distance from earth
+
