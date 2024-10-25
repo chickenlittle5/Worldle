@@ -1,5 +1,5 @@
 Temperature
-Distance from Sun
+The year it was discovered
 Size/radius
 Mass
 Distance from earth
