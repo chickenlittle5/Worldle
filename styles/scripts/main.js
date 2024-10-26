@@ -29,8 +29,12 @@ function selectItem(element) {
     toggleDropdown();
     showTable();
 
-    var planetDisplay = document.getElementById("td");
-    planetDisplay.innerHTML = selectedText;
+    document.getElementById("td1").innerHTML = selectedText;
+    document.getElementById("td2").innerHTML = "radius data";
+    document.getElementById("td3").innerHTML = "mass data";
+    document.getElementById("td4").innerHTML = "temp data";
+    document.getElementById("td5").innerHTML = "year data";
+    document.getElementById("td6").innerHTML = "dist data";
     
 }
 
