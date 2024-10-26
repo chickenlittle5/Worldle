@@ -5,6 +5,11 @@ function toggleDropdown() {
   dropdown.classList.toggle("show");
 }
 
+function hideButton() {
+  const startButton = document.getElementById("startButton");
+  startButton.style.display = "none";
+}
+
 function filterDropdownItems() {
   const input = document.getElementById("myInput");
   const filter = input.value.toUpperCase();
@@ -50,6 +55,14 @@ function determine(planet){
   }
   return false;
 }
+
+/*function determine(value){
+  if(value > valueSol){
+    return true;
+  }
+  return false;
+}
+*/
 
 function addRow(selectedText){
     var table = document.getElementById("table");
