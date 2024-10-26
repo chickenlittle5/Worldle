@@ -242,7 +242,7 @@ p {
 
 .th,.td {
   display: table-cell;
-  text-align: left;
+  text-align: center;
   padding: 8px;
   font-size: 1rem;
   border: 1px solid #dddddd;
@@ -263,6 +263,6 @@ p {
 }
 
 .arrow-image {
-  max-width: 13%;
+  width: 13%;
   height: auto;
 }

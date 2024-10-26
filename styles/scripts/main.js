@@ -44,20 +44,30 @@ function selectItem(element) {
     addRow(selectedText);
 }
 
+function determine(planet){
+  if(planet =="Sun" || planet == "Earth"){
+    return true;
+  }
+  return false;
+}
+
 function addRow(selectedText){
     var table = document.getElementById("table");
     var tr = document.createElement("tr");
     appendData(tr, selectedText);
-    appendData(tr, "radius data");
-    appendData(tr, "mass data");
-    appendData(tr, "temp data");
-    appendData(tr, "year data");
-    appendData(tr, "dist data");
+    var up = "<img src = 'Up.png' class = 'arrow-image'>"
+    var down = "<img src = 'Down.png' class = 'arrow-image'>"
+    appendData(tr, determine(selectedText)?up:down);
+    appendData(tr, up);
+    appendData(tr, up);
+    appendData(tr, up);
+    appendData(tr, up);
     table.appendChild(tr);
 }
 
 function appendData(tr, data){
   var td = document.createElement("td");
+  td.classList.add('td'); 
   td.innerHTML = data;
   tr.appendChild(td);
 }
