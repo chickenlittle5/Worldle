@@ -228,3 +228,37 @@ p {
     font-size: 1rem;
   }
 }
+
+
+.table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 78%;
+  max-width: 1200px;
+  margin: 2rem auto;
+  display: none;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.th,.td {
+  display: table-cell;
+  text-align: left;
+  padding: 8px;
+  font-size: 1rem;
+  border: 1px solid #dddddd;
+  width: 13%;
+}
+
+.th{
+  color: var(--color-light);
+}
+
+.td {
+  color: var(--color-medium-dark);
+  border-top-style:none;
+}
+
+.tr {
+  display: table-row;
+}
+

@@ -27,16 +27,22 @@ function selectItem(element) {
     document.querySelector('.dropbtn').textContent = selectedText;
     
     toggleDropdown();
+    showTable();
 
-    var planetDisplay = document.createElement("div");
-    usernameDisplay.innerHTML = selectedText;
+    var planetDisplay = document.getElementById("td");
+    planetDisplay.innerHTML = selectedText;
+    
+}
 
+// Show the table
+function showTable() {
+  document.querySelector('.table').style.display = 'block';
 }
 
 
 // Show the loader
 function showLoader() {
-    document.querySelector('.loader').style.display = 'block';
+  document.querySelector('.loader').style.display = 'block';
 }
 
 // Hide the loader
