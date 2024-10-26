@@ -98,7 +98,7 @@ function selectItem(element) {
     
     // You can do something with the selected value here
     // For example, update the dropdown button text:
-    document.querySelector('.dropbtn').textContent = selectedText;
+    document.querySelector('.dropbtn').textContent = selectedText; 
     
     // Close the dropdown
     toggleDropdown();
