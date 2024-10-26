@@ -17,7 +17,9 @@ private:
     string _type;
 
 public:
-    CosmicObject() { _name = ""; _type = ""; _temperature = NULL; _radius = NULL; _yearDiscovered = NULL; _distanceFromEarth = NULL; }
+    CosmicObject() 
+    : _name(""), _type(""), _temperature(0.0), _radius(0.0), _mass(0.0), _yearDiscovered(0), _distanceFromEarth(0.0) {}
+
     CosmicObject(string name, double radius, double mass, double temperature, int yearDiscovered, double distanceFromEarth, string type) {
         _name = name; 
         _radius = radius; 
