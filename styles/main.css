@@ -262,3 +262,7 @@ p {
   display: table-row;
 }
 
+.arrow-image {
+  max-width: 13%;
+  height: auto;
+}
