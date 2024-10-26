@@ -47,25 +47,19 @@ function selectItem(element) {
 function addRow(selectedText){
     var table = document.getElementById("table");
     var tr = document.createElement("tr");
-    var td1 = document.createElement("td");
-    td1.innerHTML = selectedText;
-    tr.appendChild(td1);
-    var td2 = document.createElement("td");
-    td2.innerHTML = "radius data";
-    tr.appendChild(td2);
-    var td3 = document.createElement("td");
-    td3.innerHTML = "mass data";
-    tr.appendChild(td3);
-    var td4 = document.createElement("td");
-    td4.innerHTML = "temp data";
-    tr.appendChild(td4);
-    var td5 = document.createElement("td");
-    td5.innerHTML = "year data";
-    tr.appendChild(td5);
-    var td6 = document.createElement("td");
-    td6.innerHTML = "dist data";
-    tr.appendChild(td6);
+    appendData(tr, selectedText);
+    appendData(tr, "radius data");
+    appendData(tr, "mass data");
+    appendData(tr, "temp data");
+    appendData(tr, "year data");
+    appendData(tr, "dist data");
     table.appendChild(tr);
+}
+
+function appendData(tr, data){
+  var td = document.createElement("td");
+  td.innerHTML = data;
+  tr.appendChild(td);
 }
 
 // Show the table

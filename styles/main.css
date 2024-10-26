@@ -255,7 +255,7 @@ p {
 
 .td {
   color: var(--color-medium-dark);
-  border-top-style:none;
+  border-top: none;
 }
 
 .tr {
