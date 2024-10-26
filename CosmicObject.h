@@ -48,6 +48,18 @@ public:
     double getDistance() const { return _distanceFromEarth; }
     string getType() const { return _type; }
 
+    friend ostream& operator<<(ostream& os, const CosmicObject& obj) {
+        os << "Name: " << obj._name << ", "
+           << "Radius: " << obj._radius << " km, "
+           << "Mass: " << obj._mass << " kg, "
+           << "Temperature: " << obj._temperature << " °C, "
+           << "Year Discovered: " << obj._yearDiscovered << ", "
+           << "Distance from Earth: " << obj._distanceFromEarth << " km, "
+           << "Type: " << obj._type;
+        return os;
+    }
+
+
 };
 
 #endif

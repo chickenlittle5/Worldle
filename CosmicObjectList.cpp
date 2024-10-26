@@ -1,7 +1,9 @@
 #include <iostream>
 #include <fstream>
 #include <sstream>
+#include <random>
 #include "CosmicObjectList.h"
+#include "CosmicObject.h"  // Ensure you include the CosmicObject header
 
 using namespace std;
 
@@ -14,9 +16,8 @@ void CosmicObjectList::populateListFromFile(const string &filename) {
     }
 
     string line;
-    getline(file, line);
+    getline(file, line); // Skip the header line
 
-    
     while (getline(file, line)) {
         stringstream lineStream(line);
         string name, type, radiusStr, massStr, tempStr, yearStr, distanceStr;
@@ -44,12 +45,11 @@ void CosmicObjectList::populateListFromFile(const string &filename) {
 
 void CosmicObjectList::printAllObjects() const {
     for (const auto &obj : cosmicObjects) {
-        cout << "Name: " << obj.getName() << ", "
-             << "Radius: " << obj.getRadius() << " km, "
-             << "Mass: " << obj.getMass() << " kg, "
-             << "Temperature: " << obj.getTemp() << " C, "
-             << "Year Discovered: " << (obj.getYear() == 0 ? "Unknown" : to_string(obj.getYear())) << ", "
-             << "Distance from Earth: " << obj.getDistance() << " km, "
-             << "Type: " << obj.getType() << endl;
+        cout << obj << endl; // Using the overloaded << operator
     }
+}
+
+CosmicObject CosmicObjectList::getRandObj() {
+    int randomNum = rand() % getSize();
+    return cosmicObjects[randomNum];
 }

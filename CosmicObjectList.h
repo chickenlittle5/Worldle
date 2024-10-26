@@ -11,6 +11,9 @@ private:
 public:
     void populateListFromFile(const std::string &filename);
     void printAllObjects() const;
+    int getSize() { return cosmicObjects.size(); }
+    CosmicObject getRandObj();
+
 };
 
 #endif
