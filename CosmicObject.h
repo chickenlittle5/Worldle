@@ -59,6 +59,19 @@ public:
         return os;
     }
 
+    bool operator==(const CosmicObject& other) const {
+    return (_name == other._name) &&
+            (_radius == other._radius) &&
+            (_mass == other._mass) &&
+            (_temperature == other._temperature) &&
+            (_yearDiscovered == other._yearDiscovered) &&
+            (_distanceFromEarth == other._distanceFromEarth) &&
+            (_type == other._type);
+    }
+
+    bool operator!=(const CosmicObject& other) const {
+        return !(*this == other);  // Return true if objects are not equal
+    }
 
 };
 
