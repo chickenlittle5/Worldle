@@ -27,7 +27,12 @@ function selectItem(element) {
     document.querySelector('.dropbtn').textContent = selectedText;
     
     toggleDropdown();
+
+    var planetDisplay = document.createElement("div");
+    usernameDisplay.innerHTML = selectedText;
+
 }
+
 
 // Show the loader
 function showLoader() {
