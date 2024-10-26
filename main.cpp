@@ -1,12 +1,10 @@
 #include <iostream>
-
-using namespace std;
+#include "CosmicObjectList.cpp"
 
 int main() {
-
-    cout << "Skibidi sigma" << endl;
-    cout << endl;
-    cout << "We";
+    CosmicObjectList list;
+    list.populateListFromFile("Data.txt"); // Load data from Data.txt
+    list.printAllObjects(); // Print all cosmic objects to verify
 
     return 0;
 }
