@@ -1,4 +1,3 @@
-# Create a 9x6 2D array with planet information
 PLANETS_INFO = [
     # [Name, Radius (km), Mass (kg), Temp (°C), Year Discovered, Distance from Earth (km)]
     ["Sun",     696340,  1.989e30,  5505,  0, 1.496e8],
@@ -37,4 +36,4 @@ def main():
         print(f"No information found for '{selected_text}'")
 
 if __name__ == "__main__":
-    main()
+    main() 
