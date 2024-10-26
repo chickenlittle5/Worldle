@@ -50,6 +50,7 @@ void CosmicObjectList::printAllObjects() const {
 }
 
 CosmicObject CosmicObjectList::getRandObj() {
-    int randomNum = rand() % getSize();
+    srand(static_cast<unsigned int>(time(0)));
+    int randomNum = rand() % (getSize() - 1);
     return cosmicObjects[randomNum];
 }

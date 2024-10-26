@@ -15,6 +15,7 @@ int main() {
     string guessName;
     cout << "Guess: ";
     cin >> guessName;
+    int counter = 0;
 
     while (guessName != initialObj.getName()) {
 
@@ -44,11 +45,13 @@ int main() {
         string type = (guess.getType() == initialObj.getType()) ? "Correct!" : "Incorrect!";
         cout << type << "\t" << endl;
 
+        counter++;
         cout << "Guess: ";
         cin >> guessName;
     }
 
     cout << "Correct!" << endl;
+    cout << "Took " << counter << " tries" << endl;
 
 
     return 0;
