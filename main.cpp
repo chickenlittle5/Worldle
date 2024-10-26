@@ -11,6 +11,8 @@ int main() {
 
     CosmicObject initialObj = list.getRandObj();
     cout << initialObj << endl;
+
+    
     
     string guessName;
     cout << "Guess: ";
@@ -20,35 +22,24 @@ int main() {
     while (guessName != initialObj.getName()) {
 
         CosmicObject guess = list.getObjectByName(guessName);
+        vector<int> statCompare;
 
-        cout << "Radius: ";
-        string radius = (guess.getRadius() < initialObj.getRadius()) ? "Higher Radius ^" : "Lower _";
-        cout << radius << "\t";
+        // Compare radius, mass, temp, year, and distance. Pushes it into stat vector
+        // -1 is less, 0 is equal, 1 is greater than
+        statCompare.push_back((guess.getRadius() < initialObj.getRadius()) ? -1 : (guess.getRadius() > initialObj.getRadius()) ? 1 : 0);
+        statCompare.push_back((guess.getMass() < initialObj.getMass()) ? -1 : (guess.getMass() > initialObj.getMass()) ? 1 : 0);
+        statCompare.push_back((guess.getTemp() < initialObj.getTemp()) ? -1 : (guess.getTemp() > initialObj.getTemp()) ? 1 : 0);
+        statCompare.push_back((guess.getYear() < initialObj.getYear()) ? -1 : (guess.getYear() > initialObj.getYear()) ? 1 : 0);
+        statCompare.push_back((guess.getDistance() < initialObj.getDistance()) ? -1 : (guess.getDistance() > initialObj.getDistance()) ? 1 : 0);
+        statCompare.push_back(guess.getType() == initialObj.getType() ? 1 : 0);
 
-        cout << "Mass: ";
-        string mass = (guess.getMass() < initialObj.getMass()) ? "Higher ^" : "Lower _";
-        cout << mass << "\t";
-
-        cout << "Temp: ";
-        string temp = (guess.getTemp() < initialObj.getTemp()) ? "Higher ^" : "Lower _";
-        cout << temp << "\t";
-
-        cout << "Year: ";
-        string year = (guess.getYear() < initialObj.getYear()) ? "Higher ^" : "Lower _";
-        cout << year << "\t";
-
-        cout << "Distance: ";
-        string distance = (guess.getDistance() < initialObj.getDistance()) ? "Higher ^" : "Lower _";
-        cout << distance << "\t";
-
-        cout << "Type: ";
-        string type = (guess.getType() == initialObj.getType()) ? "Correct!" : "Incorrect!";
-        cout << type << "\t" << endl;
+        
 
         counter++;
         cout << "Guess: ";
         cin >> guessName;
     }
+
 
     cout << "Correct!" << endl;
     cout << "Took " << counter << " tries" << endl;
