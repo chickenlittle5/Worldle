@@ -1,187 +1,46 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-.dropbtn {
-  background-color: #04AA6D;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-}
-
-.dropbtn:hover, .dropbtn:focus {
-  background-color: #3e8e41;
-}
-
-#myInput {
-  box-sizing: border-box;
-  background-image: url('searchicon.png');
-  background-position: 14px 12px;
-  background-repeat: no-repeat;
-  font-size: 16px;
-  padding: 14px 20px 12px 45px;
-  border: none;
-  border-bottom: 1px solid #ddd;
-}
-
-#myInput:focus {outline: 3px solid #ddd;}
-
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f6f6f6;
-  min-width: 230px;
-  overflow: auto;
-  border: 1px solid #ddd;
-  z-index: 1;
-}
-
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown a:hover {background-color: #ddd;}
-
-.show {display: block;}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website Title</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
 </head>
-<body style="background-color:white;">
+<body>
+    <nav class="option-bar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-<h2>Search/Filter Dropdown</h2>
-<p>Click on the button to open the dropdown menu, and use the input field to search for a specific dropdown link.</p>
+    <div class="container">
+        <div class="content-wrapper">
+            <div class="text-content">
+                <h2>Your Heading</h2>
+                <p>Your paragraph text goes here. Describe your website or provide any relevant information.</p>
 
-<div class="dropdown">
-  <button onclick="myFunction()" class="dropbtn">Dropdown</button>
-  <div id="myDropdown" class="dropdown-content">
-    <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
-    <a href="#Adrastea">Adrastea</a>
-    <a href="#Aitne">Aitne</a>
-    <a href="#Albiorix">Albiorix</a>
-    <a href="#Amalthea">Amalthea</a>
-    <a href="#Ananke">Ananke</a>
-    <a href="#Aoede">Aoede</a>
-    <a href="#Arche">Arche</a>
-    <a href="#Ariel">Ariel</a>
-    <a href="#Atlas">Atlas</a>
-    <a href="#Autonoe">Autonoe</a>
-    <a href="#Belinda">Belinda</a>
-    <a href="#Bianca">Bianca</a>
-    <a href="#Caliban">Caliban</a>
-    <a href="#Callirrhoe">Callirrhoe</a>
-    <a href="#Callisto">Callisto</a>
-    <a href="#Calypso">Calypso</a>
-    <a href="#Carme">Carme</a>
-    <a href="#Carpo">Carpo</a>
-    <a href="#Ceres">Ceres</a>
-    <a href="#Chaldene">Chaldene</a>
-    <a href="#Chaos">Chaos</a>
-    <a href="#Charon">Charon</a>
-    <a href="#Cordelia">Cordelia</a>
-    <a href="#Cressida">Cressida</a>
-    <a href="#Cyllene">Cyllene</a>
-    <a href="#Daphnis">Daphnis</a>
-    <a href="#Dimorphos">Dimorphos</a>
-    <a href="#Deimos">Deimos</a>
-    <a href="#Desdemona">Desdemona</a>
-    <a href="#Despina">Despina</a>
-    <a href="#Deucalion">Deucalion</a>
-    <a href="#Dione">Dione</a>
-    <a href="#Dysnomia">Dysnomia</a>
-    <a href="#Earth">Earth</a>
-    <a href="#Elara">Elara</a>
-    <a href="#Enceladus">Enceladus</a>
-    <a href="#Epimetheus">Epimetheus</a>
-    <a href="#Erinome">Erinome</a>
-    <a href="#Eris">Eris</a>
-    <a href="#Erriapo">Erriapo</a>
-    <a href="#Euanthe">Euanthe</a>
-    <a href="#Eukelade">Eukelade</a>
-    <a href="#Euporie">Euporie</a>
-    <a href="#Europa">Europa</a>
-    <a href="#Eurydome">Eurydome</a>
-    <a href="#Ferdinand">Ferdinand</a>
-    <a href="#Francisco">Francisco</a>
-    <a href="#Galatea">Galatea</a>
-    <a href="#Ganymede">Ganymede</a>
-    <a href="#Halimede">Halimede</a>
-    <a href="#Harpalyke">Harpalyke</a>
-    <a href="#Hegemone">Hegemone</a>
-    <a href="#Helene">Helene</a>
-    <a href="#Helike">Helike</a>
-    <a href="#Hermippe">Hermippe</a>
-    <a href="#Himalia">Himalia</a>
-    <a href="#Huya">Huya</a>
-    <a href="#Hydra">Hydra</a>
-    <a href="#Hygiea">Hygiea</a>
-    <a href="#Hyperion">Hyperion</a>
-    <a href="#Iapetus">Iapetus</a>
-    <a href="#Ijiraq">Ijiraq</a>
-    <a href="#Io">Io</a>
-    <a href="#Iocaste">Iocaste</a>
-    <a href="#Isonoe">Isonoe</a>
-    <a href="#Ixion">Ixion</a>
-    <a href="#Janus">Janus</a>
-    <a href="#Taygete">Taygete</a>
-    <a href="#Telesto">Telesto</a>
-    <a href="#Tethys">Tethys</a>
-    <a href="#Thalassa">Thalassa</a>
-    <a href="#Thebe">Thebe</a>
-    <a href="#Thelxinoe">Thelxinoe</a>
-    <a href="#Themisto">Themisto</a>
-    <a href="#Thrymr">Thrymr</a>
-    <a href="#Thyone">Thyone</a>
-    <a href="#Titan">Titan</a>
-    <a href="#Titania">Titania</a>
-    <a href="#Trinculo">Trinculo</a>
-    <a href="#Triton">Triton</a>
-    <a href="#Umbriel">Umbriel</a>
-    <a href="#Uranus">Uranus</a>
-    <a href="#Varuna">Varuna</a>
-    <a href="#Venus">Venus</a>
-    <a href="#Vesta">Vesta</a>
-    <a href="#Ymir">Ymir</a>
-    <a href="#Zoe">Zoe</a>
+                <div class="dropdown">
+                    <button onclick="toggleDropdown()" class="dropbtn">Dropdown</button>
+                    <div id="myDropdown" class="dropdown-content">
+                        <input type="text" placeholder="Search.." id="myInput" onkeyup="filterDropdownItems()">
+                        <a href="#" data-value="home" onclick="selectItem(this)">Home</a>
+                        <a href="#" data-value="about" onclick="selectItem(this)">About</a>
+                        <a href="#" data-value="contact" onclick="selectItem(this)">Contact</a>
+                    </div>
+                </div>
+            </div>
+            <div class="image-container">
+                <img src="Picture.jpg" alt="Description of the image" class="main-image">
+            </div>
+        </div>
+    </div>
 
+    <div class="loader"></div>
 
-  </div>
-</div>
-
-<script>
-/* When the user clicks on the button,
-toggle between hiding and showing the dropdown content */
-function myFunction() {
-  document.getElementById("myDropdown").classList.toggle("show");
-}
-
-function filterFunction() {
-  const input = document.getElementById("myInput");
-  const filter = input.value.toUpperCase();
-  const div = document.getElementById("myDropdown");
-  const a = div.getElementsByTagName("a");
-  for (let i = 0; i < a.length; i++) {
-    txtValue = a[i].textContent || a[i].innerText;
-    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-      a[i].style.display = "";
-    } else {
-      a[i].style.display = "none";
-    }
-  }
-}
-
-
-</script>
-
-
+    <script src="styles/scripts/main.js"></script>
 </body>
 </html>
